@@ -1,0 +1,123 @@
+$VeryDarkGray:hsl(0,0%,17%);
+$DarkGray:hsl(0,0%,59%);
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik';
+    box-sizing: border-box;
+}
+@mixin flex($displayType:flex,$alignItems:center,$justifyContent:center)
+{
+display: $displayType;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+header{
+    width: 100vw;
+    height: 30vh;
+    background: url(./images/pattern-bg-desktop.png);
+    background-size: 100%;
+    padding: 3%;
+    gap: 2vh;
+    @include flex($justifyContent:flex-start);
+    flex-direction: column;
+    h1{
+        color: white;
+    }
+    input{
+        padding: 15px;
+        height: 50px;
+        width: 500px;
+        border-radius: 10px 0px 0px 10px;
+        border: none;
+    }
+    .form-wrapper{
+        display: flex;
+        align-items: center;
+    }
+    button
+    {
+        height: 50px;
+        padding: 15px;
+        border: none;
+        background-color: black;
+        border-radius: 0px 10px 10px 0px;
+        display: flex;
+        align-items: center;
+    }
+   
+
+}
+ main{
+    
+        width: 100vw;
+        height: 70vh;
+        .trackerData{
+            display: none;
+            min-width: 400px;
+            height: 20vh;
+            width: 60vw;
+            position: absolute;
+    z-index: 500;
+    top: 20vh;
+    left: 20%;
+    
+    background-color: white;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        }
+        .trackerData__details{
+            width: 25%;
+            height: 60%;
+            padding: 10px;
+            border-right: 1px solid $DarkGray;
+             p
+            {
+                font-size: clamp(12px,1vw,30px);
+                color: $DarkGray;
+                ;
+            }
+           p:last-child{
+             font-weight: 700;
+            font-size: 1.5vw;
+            color: $VeryDarkGray;
+            font-size: clamp(16px,1.5vw,30px);
+           }
+        }
+        .trackerData__details:last-child
+        {
+            border: none;
+        }
+    
+        #map 
+    { 
+        width: 100vw;
+        height: 100%; 
+    }
+    }
+    @media  (max-width:600px) {
+       main .trackerData
+        {
+            flex-direction:column;
+            
+            height: auto;
+            min-width: 0px;
+            border-radius: 15px;
+            .trackerData__details
+            {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                border: none;
+                align-items: center;
+            }
+        }
+        header input
+        {
+            width: 80vw;
+        }
+    }
+   
