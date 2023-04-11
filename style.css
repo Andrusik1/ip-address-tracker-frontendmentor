@@ -62,7 +62,6 @@ main .trackerData {
   left: 20%;
   background-color: white;
   border-radius: 1vw;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
