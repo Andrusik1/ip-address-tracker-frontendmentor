@@ -54,6 +54,7 @@ header{
         width: 100vw;
         height: 70vh;
         .trackerData{
+            transition: 1s;
             display: none;
             min-width: 400px;
             height: 20vh;
@@ -101,8 +102,9 @@ header{
     @media  (max-width:600px) {
        main .trackerData
         {
+            transition: 1s;
             flex-direction:column;
-            
+            display: none;
             height: auto;
             min-width: 0px;
             border-radius: 15px;

@@ -35,6 +35,7 @@ const locationData = document.querySelector(".location");
 const timezoneData = document.querySelector(".timezone");
 const ispData = document.querySelector(".isp");
 const trackerData  = <HTMLElement>document.querySelector('.trackerData');
+
 async function requestdata(ip:string) {
   try{const request = await fetch(
 		`https://geo.ipify.org/api/v2/country,city?apiKey=at_OVffY3qoQl621DnpaqjiJk9liFKw9&ipAddress=${ip}`
